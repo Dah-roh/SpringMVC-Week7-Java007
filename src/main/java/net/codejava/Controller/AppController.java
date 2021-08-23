@@ -4,6 +4,7 @@ import net.codejava.Models.Customer;
 import net.codejava.Models.Product;
 import net.codejava.Service.CustomerService;
 import net.codejava.Service.ProductService;
+import net.codejava.ServiceImpl.CustomerServiceImpl;
 import net.codejava.ServiceImpl.ProductServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,12 +19,11 @@ public class AppController {
 
 	private ProductService service;
 	private CustomerService customerService;
-
-	//camelCase
+	//camelCase---- variable names
 	//kebab-case-looks-like-suya-on-a-stick
-	//snake_case_looks_like_a_snake
+	//snake_case_looks_like_a_snake ---routes or endpoint naming
 	@Autowired
-	public AppController(ProductServiceImpl service, CustomerService customerService) {
+	public AppController(ProductService service, CustomerService customerService) {
 		this.service = service;
 		this.customerService = customerService;
 	}

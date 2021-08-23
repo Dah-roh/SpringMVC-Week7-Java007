@@ -7,7 +7,7 @@
     <title>Login</title>
 </head>
 <body>
-<p th:text="${error}"></p>
+<h1 th:text="${error}"></h1>
 <form th:action="@{/login}" th:object="${customer}" method="post">
   Username:<input name="username" id="username" th:field="*{username}">
     Password<input name="password" type="password" th:field="*{password}">
